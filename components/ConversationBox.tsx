@@ -10,18 +10,18 @@ import { FullConversationType } from "@app/types";
 import useOtherUser from "@app/hooks/useOtherUser";
 import Avatar from "./Avatar";
 
-type Props = {
+type ConversationBoxProps = {
   data: FullConversationType;
   selected?: boolean;
 };
 
-const ConversationBox = ({ data, selected }: Props) => {
+const ConversationBox = ({ data, selected }: ConversationBoxProps) => {
   const otherUser = useOtherUser(data);
   const session = useSession();
   const router = useRouter();
 
   const handleClick = useCallback(() => {
-    router.push(`/conversation/${data.id}`);
+    router.push(`/conversations/${data.id}`);
   }, [data.id, router]);
 
   const lastMessage = useMemo(() => {
