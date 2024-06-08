@@ -1,5 +1,5 @@
 import getUsers from "@app/actions/getUsers";
-import UserList from "@components/UserList";
+import UserList from "@components/users/UserList";
 import Sidebar from "@components/sidebar/Sidebar";
 
 export default async function UsersLayout({

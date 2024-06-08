@@ -1,8 +1,8 @@
 import getConversationById from "@app/actions/getConversationById";
 import getMessages from "@app/actions/getMessages";
-import ChatBody from "@components/ChatBody";
-import ChatForm from "@components/ChatForm";
-import ChatHeader from "@components/ChatHeader";
+import ChatBody from "@components/conversation/ChatBody";
+import ChatForm from "@components/conversation/ChatForm";
+import ChatHeader from "@components/conversation/ChatHeader";
 import EmptyState from "@components/EmptyState";
 
 type IParams = {

@@ -3,7 +3,7 @@
 import useConversation from "@app/hooks/useConversation";
 import axios from "axios";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import MessageInput from "./MessageInput";
+import MessageInput from "@components/conversation/MessageInput";
 import { HiPaperAirplane } from "react-icons/hi2";
 import { BsPaperclip } from "react-icons/bs";
 import { CldUploadButton } from "next-cloudinary";

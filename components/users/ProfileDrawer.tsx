@@ -11,9 +11,9 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import Avatar from "./Avatar";
-import ConfirmModal from "./ConfirmModal";
-import AvatarGroup from "./avatar/AvatarGroup";
+import Avatar from "@components/avatar/Avatar";
+import ConfirmModal from "@components/modals/ConfirmModal";
+import AvatarGroup from "@components/avatar/AvatarGroup";
 
 type Props = {
   isOpen: boolean;

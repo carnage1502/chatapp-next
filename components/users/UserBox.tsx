@@ -4,8 +4,8 @@ import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import Avatar from "./Avatar";
-import LoadingModal from "./modals/LoadingModal";
+import Avatar from "@components/avatar/Avatar";
+import LoadingModal from "@components/modals/LoadingModal";
 
 type Props = {
   data: User;

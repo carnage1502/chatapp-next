@@ -5,9 +5,9 @@ import { Conversation, User } from "@prisma/client";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
-import Avatar from "./Avatar";
-import ProfileDrawer from "./ProfileDrawer";
-import AvatarGroup from "./avatar/AvatarGroup";
+import Avatar from "@components/avatar/Avatar";
+import ProfileDrawer from "@components/users/ProfileDrawer";
+import AvatarGroup from "@components/avatar/AvatarGroup";
 
 type Props = {
   conversation: Conversation & {

@@ -8,8 +8,8 @@ import { useSession } from "next-auth/react";
 import clsx from "clsx";
 import { FullConversationType } from "@app/types";
 import useOtherUser from "@app/hooks/useOtherUser";
-import Avatar from "./Avatar";
-import AvatarGroup from "./avatar/AvatarGroup";
+import Avatar from "@components/avatar/Avatar";
+import AvatarGroup from "@components/avatar/AvatarGroup";
 
 type ConversationBoxProps = {
   data: FullConversationType;

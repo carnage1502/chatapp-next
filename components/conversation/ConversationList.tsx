@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { MdOutlineGroupAdd } from "react-icons/md";
 import ConversationBox from "./ConversationBox";
-import GroupChatModal from "./conversation/GroupChatModal";
+import GroupChatModal from "./GroupChatModal";
 import { User } from "@prisma/client";
 
 type Props = {

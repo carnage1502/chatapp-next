@@ -5,10 +5,10 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import toast from "react-hot-toast";
-import Modal from "./Modal";
+import Modal from "@components/modals/Modal";
 import { FiAlertTriangle } from "react-icons/fi";
 import { DialogTitle } from "@headlessui/react";
-import Button from "./Button";
+import Button from "@components/Button";
 
 type Props = {
   isOpen?: boolean;

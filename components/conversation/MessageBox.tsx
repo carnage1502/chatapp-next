@@ -3,11 +3,11 @@
 import { FullMessageType } from "@app/types";
 import clsx from "clsx";
 import { useSession } from "next-auth/react";
-import Avatar from "./Avatar";
+import Avatar from "@components/avatar/Avatar";
 import { format } from "date-fns";
 import Image from "next/image";
 import { useState } from "react";
-import ImageModal from "./modals/ImageModal";
+import ImageModal from "@components/modals/ImageModal";
 
 type MessageBoxProps = {
   data: FullMessageType;

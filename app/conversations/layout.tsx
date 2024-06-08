@@ -1,6 +1,6 @@
 import getConversations from "@app/actions/getConversations";
 import getUsers from "@app/actions/getUsers";
-import ConversationList from "@components/ConversationList";
+import ConversationList from "@components/conversation/ConversationList";
 import Sidebar from "@components/sidebar/Sidebar";
 
 export default async function Conversationslayout({
