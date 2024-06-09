@@ -14,6 +14,7 @@ import {
 import Avatar from "@components/avatar/Avatar";
 import ConfirmModal from "@components/modals/ConfirmModal";
 import AvatarGroup from "@components/avatar/AvatarGroup";
+import useActiveList from "@app/hooks/useActiveList";
 
 type Props = {
   isOpen: boolean;
@@ -26,6 +27,8 @@ type Props = {
 const ProfileDrawer = ({ isOpen, onClose, data }: Props) => {
   const otherUser = useOtherUser(data);
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const { members } = useActiveList();
+  const isActive = members.indexOf(otherUser?.email!) !== -1;
 
   const joinedDate = useMemo(() => {
     return format(new Date(otherUser.createdAt), "PP");
@@ -39,8 +42,8 @@ const ProfileDrawer = ({ isOpen, onClose, data }: Props) => {
     if (data.isGroup) {
       return `${data.users.length} members`;
     }
-    return "online";
-  }, [data]);
+    return isActive ? "online" : "offline";
+  }, [data, isActive]);
 
   return (
     <>
