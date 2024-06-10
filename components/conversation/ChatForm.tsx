@@ -52,7 +52,7 @@ const ChatForm = (props: Props) => {
         <BsPaperclip size={30} className="text-blue-500" />
       </CldUploadButton>
 
-      <HiOutlineEmojiHappy size={30} className="text-blue-500" />
+      {/* <HiOutlineEmojiHappy size={30} className="text-blue-500" /> */}
 
       <form
         onSubmit={handleSubmit(onSubmit)}
