@@ -7,7 +7,6 @@ import MessageInput from "@components/conversation/MessageInput";
 import { HiPaperAirplane } from "react-icons/hi2";
 import { BsPaperclip } from "react-icons/bs";
 import { CldUploadButton } from "next-cloudinary";
-import { useState } from "react";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import EmojiPicker from "emoji-picker-react";
 
@@ -27,8 +26,6 @@ const ChatForm = (props: Props) => {
     },
   });
 
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setValue("message", "", { shouldValidate: true });
 
@@ -45,8 +42,6 @@ const ChatForm = (props: Props) => {
     });
   };
 
-  const handleEmojiClick = () => {};
-
   return (
     <div className="py-4 px-4 bg-white border-t flex items-center gap-2 lg:gap-2 w-full">
       <CldUploadButton
@@ -57,17 +52,7 @@ const ChatForm = (props: Props) => {
         <BsPaperclip size={30} className="text-blue-500" />
       </CldUploadButton>
 
-      <HiOutlineEmojiHappy
-        size={30}
-        className="text-blue-500"
-        onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-      />
-
-      {showEmojiPicker && (
-        <div className="">
-          <EmojiPicker onEmojiClick={handleEmojiClick} />
-        </div>
-      )}
+      <HiOutlineEmojiHappy size={30} className="text-blue-500" />
 
       <form
         onSubmit={handleSubmit(onSubmit)}
